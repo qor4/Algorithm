@@ -1,14 +1,19 @@
 print_list = []
+num_set = [0 for i in range((2*123456) + 1)]
+num_set[1] = 1
+for i in range(2, (2*123456) + 1):
+    j = 2
+    while((i * j) < ((2*123456) + 1)):
+        num_set[j*i] = 1
+        j += 1
+
 while(True):
     n = int(input())
     if n == 0:
         break
     count = 0
     for i in range(n+1, (2*n)+1):
-        for j in range(2, i):
-            if i % j == 0:
-                break
-        else:
+        if num_set[i] != 1:
             count += 1
     print_list.append(count)
 
