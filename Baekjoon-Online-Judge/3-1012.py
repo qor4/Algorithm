@@ -28,4 +28,3 @@ for _ in range(t):
             queue = []
             state = 1
             cnt += 1
-
