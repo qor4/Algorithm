@@ -1,0 +1,7 @@
+for test_case in range(1, 11):
+    dump = int(input())
+    case = list(map(int, input().split()))
+    for i in range(dump):
+        case[case.index(max(case))] -= 1
+        case[case.index(min(case))] += 1
+    print("#", test_case, " ", max(case) - min(case), sep="")
