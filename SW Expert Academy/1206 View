@@ -1,0 +1,10 @@
+for test_case in range(1, 11):
+    N = int(input())
+    case = list(map(int, input().split()))
+    cnt = 0
+    for j in range(2, N-2):
+        height = max(case[j-2], case[j-1], case[j+1], case[j+2])
+        house = case[j] - height
+        if house > 0:
+            cnt += house
+    print("#", test_case, " ", cnt, sep="")
